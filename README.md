@@ -3,4 +3,4 @@ A Dynamic DNS Service built using Cloudflare AuthDNS and Workers. Allows a hostn
 
 Tested on 2Wire Router with no-ip and dyndns config but configured with Cloudflare Worker unique FQDN.
 
-#This is no longer working, seems like support to update DNS record via API is removed, at least for my free plans.
+# This is no longer working, seems like support to update DNS record via API is removed, at least for my free plans.
