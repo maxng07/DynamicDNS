@@ -22,5 +22,6 @@ To start, you need to have a Cloudflare Account, configure the DNS Record with a
 
 ## Reference
 1. no-ip <a href="https://www.noip.com/integrate/request"> ddns protocol </a>
+2. Dyndns <a href="https://help.dyn.com/remote-access-api/perform-update/"> protocol </a> spec
 
 
