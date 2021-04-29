@@ -20,6 +20,8 @@ To start, you need to have a Cloudflare Account, configure the DNS Record with a
 6. Either unplug and plug back the Internet cable or reset your Home Gateway. It should send a HTTP GET request to the Cloudflare Worker webhook URL. 
 7. To verify, perform a dig or nslookup to the DNS record, it should now be updated to the external Public IP address of the Home Gateway.
 
+Contributors welcome to test and add other Home Gateway that may be different in the way HTTP/S request is send for IP updates.
+
 ## Reference
 1. no-ip <a href="https://www.noip.com/integrate/request"> ddns protocol </a>
 2. Dyndns <a href="https://help.dyn.com/remote-access-api/perform-update/"> protocol </a> spec
