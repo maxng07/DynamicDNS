@@ -1,7 +1,7 @@
 # Dynamic DNS
 A Dynamic DNS Service built using Cloudflare AuthDNS and Worker. Allows a hostname to be updated whenever the dynamic IP address changes (assigned by DHCP). For hosting application behind a home broadband. A home router ddns client can be configured to send update to Cloudflare Worker whenever the IP lease changes. Worker will then parse the incoming Client-IP and update the DNS record on Cloudflare DNS using Cloudflare API.
 
-Tested on 2Wire Router with no-ip and dyndns config and configured with Cloudflare Worker webhook URL instead.
+Testing has been done with 2Wire Home Router with no-ip and dyndns config and configured to send to Cloudflare Worker webhook URL. The author would welcome feedback of other Home Routers that integrate well with the Worker's code.
 
 Using Cloudflare AuthDNS as Dynamic DNS has multiple configuration possibilities, one of the commonly found on the internet is have a script running behind the Home Gateway and updates Cloudflare AuthDNS whenever the IP changes (new DHCP lease) using cloudflare API. This method uses a Cloudflare Worker (which comes with a free tier for Free Plan). Either the ddns client on the Home Gateway can send update to Cloudflare Worker whenever the IP changes or a device behind the network can perform a GET request to the Worker. The Worker will then update the DNS record using Cloudflare API.
 
@@ -19,4 +19,8 @@ To start, you need to have a Cloudflare Account, configure the DNS Record with a
 5. Copy the Webhook URL and you can use this in your ddns setting in your Home Gateway. Most Home Gateway ddns client only support HTTP/80.
 6. Either unplug and plug back the Internet cable or reset your Home Gateway. It should send a HTTP GET request to the Cloudflare Worker webhook URL. 
 7. To verify, perform a dig or nslookup to the DNS record, it should now be updated to the external Public IP address of the Home Gateway.
+
+## Reference
+1. no-ip <a href="https://www.noip.com/integrate/request"> ddns protocol </a>
+
 
