@@ -20,7 +20,7 @@ if (namepwd === null ) {
 }
 
 var decode = atob(str) // base64 decode 
-var test = USERNAME + ":" + PASSWORD // the username and password send by the ddns client
+var test = USERNAME + ":" + PASSWORD // the username and password set on the ddns client
 
 var url = "https://api.cloudflare.com/client/v4/zones/{fill in zone-ID}/dns_records/{fill in DNS_record-ID}"
 
