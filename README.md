@@ -25,5 +25,6 @@ Contributors welcome to test and add other Home Gateway that may be different in
 ## Reference
 1. no-ip <a href="https://www.noip.com/integrate/request"> ddns protocol </a>
 2. Dyndns <a href="https://help.dyn.com/remote-access-api/perform-update/"> protocol </a> spec
+3. <a href=:https://tools.ietf.org/html/rfc2617"> RFC2617 </a> Section 2 
 
 
