@@ -7,7 +7,7 @@ Using Cloudflare AuthDNS as Dynamic DNS has multiple configuration possibilities
 
 2 supplied Worker script is available here
 1. cf_worker_dynupdate-without-authorization.js - performs update on the DNS Record using the visiting ClientIP address without performing any checks.
-2. cf_worker_ddns-authorization.js - perform checks on the Authorization header set by the ddns client, if the username and password matches, perform an update on DNS record using API.
+2. cf_worker_ddns-authorization.js - perform checks on the Authorization header set by the ddns client, if the username and password matches, perform an update on DNS record using API. Comparison of username and password is case sensitive.
 
 Depending on setup, you can use either of the Worker script.
 
