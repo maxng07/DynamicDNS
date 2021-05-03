@@ -30,7 +30,7 @@ var Body = {
   "type": "A",
   "content": clientIP,
   "proxied": false,
-  "ttl": 180
+  "ttl": 60 //changing to more optimum value without taxing AuthDNS
 }
 
 var myHeaders = new Headers()
