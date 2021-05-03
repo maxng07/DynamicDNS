@@ -16,7 +16,7 @@ var Body = {
   "type": "A", // the type of record
   "content": clientIP,
   "proxied": false,
-  "ttl": 180 // changing to more optimum value without taxing AuthDNS
+  "ttl": 60 // changing to more optimum value without taxing AuthDNS
 }
 var myHeaders = new Headers()
       myHeaders.append('Content-Type', 'application/json;charset=UTF-8')
