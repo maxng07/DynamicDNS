@@ -1,11 +1,11 @@
 # Dynamic DNS
-A Dynamic DNS Service built using Cloudflare AuthDNS and Worker. Allows a hostname to be updated whenever the dynamic IP address changes (assigned by DHCP). For hosting application behind a home broadband. A home router ddns client can be configured to send update to Cloudflare Worker whenever the IP lease changes. Worker will then parse the incoming Client-IP and update the DNS record on Cloudflare DNS using Cloudflare API.
+A Dynamic DNS Service built using Cloudflare AuthDNS and Workers. Allows a hostname to be updated whenever the dynamic IP address changes (assigned by DHCP). For hosting application behind a home broadband. A home router ddns client can be configured to send update to Cloudflare Workers whenever the IP lease changes. Worker will then parse the incoming Client-IP and update the DNS record on Cloudflare DNS using Cloudflare API.
 
 Testing has been done with 2Wire Home Router with no-ip and dyndns config and configured to send to Cloudflare Worker webhook URL. The author would welcome feedback of other Home Routers that integrate well with the Worker's code.
 
 Using Cloudflare AuthDNS as Dynamic DNS has multiple configuration possibilities, one of the commonly found on the internet is have a script running behind the Home Gateway and updates Cloudflare AuthDNS whenever the IP changes (new DHCP lease) using cloudflare API. This method uses a Cloudflare Worker (which comes with a free tier for Free Plan). Either the ddns client on the Home Gateway can send update to Cloudflare Worker whenever the IP changes or a device behind the network can perform a GET request to the Worker. The Worker will then update the DNS record using Cloudflare API.
 
-2 supplied Worker script is available here
+2 supplied Workers script is available here
 1. cf_worker_dynupdate-without-authorization.js - performs update on the DNS Record using the visiting ClientIP address without performing any checks.
 2. cf_worker_ddns-authorization.js - perform checks on the Authorization header set by the ddns client, if the username and password matches, perform an update on DNS record using API. Comparison of username and password is case sensitive.
 
